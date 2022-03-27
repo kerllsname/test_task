@@ -1,6 +1,13 @@
+import ErrorPage from './ErrorPage';
 import avatar from '../../../images/avatar.png';
 
 export default function ProfilePage() {
+  const accountName = localStorage.getItem('name');
+
+  if (!accountName) {
+    return <ErrorPage />;
+  }
+
   return (
     <main className="profile">
       <div className="profile__img">
@@ -10,9 +17,8 @@ export default function ProfilePage() {
         <div className="info__nickname">nikname: Admin</div>
         <div className="info__date">date of registration: 27.03.2022</div>
         <div className="info__about">
-          about:
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-          dictum orci. Pellentesque euismod odio eget lacus egestas rhoncus.
+          about: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+          eu dictum orci. Pellentesque euismod odio eget lacus egestas rhoncus.
           Curabitur lacinia congue augue, eu venenatis ligula. Aliquam egestas
           fermentum feugiat. Proin pellentesque porta auctor. Morbi laoreet
           porta dui, at hendrerit erat cursus eu. Nullam sit amet lacus
