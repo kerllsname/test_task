@@ -7,10 +7,17 @@ export default function ProfilePage() {
         <img src={avatar} alt="avatar" />
       </div>
       <div className="profile__info">
-        <div className="info__nickname">nikname: Admin</div>
-        <div className="info__date">date of registration: 27.03.2022</div>
+        <div className="info__nickname">
+          <strong>nikname</strong>
+          : Admin
+        </div>
+        <div className="info__date">
+          <strong>date of registration</strong>
+          : 27.03.2022
+        </div>
         <div className="info__about">
-          about: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+          <strong>about</strong>
+          : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
           eu dictum orci. Pellentesque euismod odio eget lacus egestas rhoncus.
           Curabitur lacinia congue augue, eu venenatis ligula. Aliquam egestas
           fermentum feugiat. Proin pellentesque porta auctor. Morbi laoreet

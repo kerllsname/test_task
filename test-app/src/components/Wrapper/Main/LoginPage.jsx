@@ -20,7 +20,7 @@ export default function LoginPage() {
         <input type="login" className="login-input" />
         <div className="field__password-title">Password</div>
         <input type="password" className="password-input" />
-        <button type="submit" onClick={handler}>
+        <button type="button" onClick={handler}>
           submit
         </button>
         <div className="field__error" />

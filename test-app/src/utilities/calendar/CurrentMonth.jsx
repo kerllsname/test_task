@@ -1,6 +1,5 @@
 export default function CurrentMonth() {
-  const currentDate = new Date();
-  const currentMonth = currentDate.getMonth();
+  let currentDateItem = localStorage.getItem('month');
   const months = [
     'Jan',
     'Feb',
@@ -15,9 +14,15 @@ export default function CurrentMonth() {
     'Dec',
   ];
 
+  if (!currentDateItem) {
+    const currentDate = new Date();
+    currentDateItem = currentDate.getMonth();
+    localStorage.setItem('month', currentDateItem);
+  }
+
   return (
     <div className="navigation__date">
-      {months[currentMonth]}
+      {months[currentDateItem]}
       , 2022
     </div>
   );

@@ -9,7 +9,7 @@ export default function RouterPage() {
   const loggedIn = localStorage.getItem('name');
 
   return (
-    <main>
+    <div className="main">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
@@ -26,6 +26,6 @@ export default function RouterPage() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
-    </main>
+    </div>
   );
 }

@@ -7,9 +7,10 @@ function addDays(date, days) {
 }
 
 function createBlocks() {
-  const currentDate = new Date();
+  const month = localStorage.getItem('month');
   const daysNames = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
-  const date = new Date(2022, 2, 1);
+  const currentDate = new Date();
+  const date = new Date(2022, month, 1);
   const firstDate = addDays(date, -date.getDate() - (date.getDay()) + 2);
   const arrayOfDates = [];
   const items = [];
@@ -18,24 +19,18 @@ function createBlocks() {
     arrayOfDates.push(addDays(firstDate, i));
   }
 
-  console.log(arrayOfDates[34].getMonth() > currentDate.getMonth());
-
   for (let i = 0; i < 35; i += 1) {
     if (i <= 6) {
-      if (arrayOfDates[i].getDate() < currentDate.getDate() || arrayOfDates[i].getMonth() < currentDate.getMonth()) {
-        items.push(<div key={i} className="calendar__day calendar__unactive-date">{daysNames[i]}, {arrayOfDates[i].getDate()}</div>);
-      } else if (arrayOfDates[i].getDate() === currentDate.getDate() && arrayOfDates[i].getMonth() === currentDate.getMonth()) {
+      if (currentDate.getDate() === arrayOfDates[i].getDate() && currentDate.getMonth() === arrayOfDates[i].getMonth()) {
         items.push(<div key={i} className="calendar__day calendar__current-date">{daysNames[i]}, {arrayOfDates[i].getDate()}</div>);
-      } else if (arrayOfDates[i].getDate() > currentDate.getDate() || arrayOfDates[i].getMonth() > currentDate.getMonth()) {
-        items.push(<div key={i} className="calendar__day calendar__active-date">{daysNames[i]}, {arrayOfDates[i].getDate()}</div>);
+      } else {
+        items.push(<div key={i} className="calendar__day">{daysNames[i]}, {arrayOfDates[i].getDate()}</div>);
       }
     } else {
-      if (arrayOfDates[i].getMonth() < currentDate.getMonth() || arrayOfDates[i].getDate() < currentDate.getDate()) {
-        items.push(<div key={i} className="calendar__day calendar__unactive-date">{arrayOfDates[i].getDate()}</div>);
-      } else if (arrayOfDates[i].getDate() === currentDate.getDate() && arrayOfDates[i].getMonth() === currentDate.getMonth()) {
+      if (currentDate.getDate() === arrayOfDates[i].getDate() && currentDate.getMonth() === arrayOfDates[i].getMonth()) {
         items.push(<div key={i} className="calendar__day calendar__current-date">{arrayOfDates[i].getDate()}</div>);
-      } else if (arrayOfDates[i].getDate() > currentDate.getDate() || arrayOfDates[i].getMonth() > currentDate.getMonth()) {
-        items.push(<div key={i} className="calendar__day calendar__active-date">{arrayOfDates[i].getDate()}</div>);
+      } else {
+        items.push(<div key={i} className="calendar__day">{arrayOfDates[i].getDate()}</div>);
       }
     }
   }
