@@ -1,12 +1,22 @@
 header {
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.header__empty {
+  width: 150px;
+}
+
+.header__account {
+  width: 80px;
+  text-align: center;
 }
 
 .wrapper {
   display: flex;
+  margin-top: 20px;
 }
 
 aside {
@@ -40,4 +50,25 @@ main {
 
 .homepage__description {
   margin-bottom: 50px;
+}
+
+.profile {
+  width: 1200px;
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between;
+}
+
+.profile__info > div {
+  margin-bottom: 20px;
+}
+
+.profile__img img{
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.profile__info {
+  width: 900px;
 }
