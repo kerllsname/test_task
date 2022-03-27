@@ -5,11 +5,6 @@ import CalendarPage from './CalendarPage';
 import LoginPage from './LoginPage';
 import AboutPage from './AboutPage';
 
-function temp(loggedIn) {
-  console.log(loggedIn);
-  return <ProfilePage />;
-}
-
 export default function RouterPage() {
   const loggedIn = localStorage.getItem('name');
 
@@ -21,9 +16,9 @@ export default function RouterPage() {
           path="/profile"
           element={
             loggedIn ? (
-              temp(loggedIn)
+              <ProfilePage />
             ) : (
-              <Navigate to="/login" />
+              <Navigate replace to="/login" />
             )
           }
         />

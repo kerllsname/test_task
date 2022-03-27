@@ -1,4 +1,6 @@
 import ErrorPage from './ErrorPage';
+import CurrentMonth from '../../../utilities/calendar/CurrentMonth';
+import Dates from '../../../utilities/calendar/Dates';
 
 export default function CalendarPage() {
   const accountName = localStorage.getItem('name');
@@ -19,46 +21,16 @@ export default function CalendarPage() {
         </div>
       </div>
       <div className="calendar_navigation">
-        <button type="button" className="navigation__button">ᐸ</button>
-        <div className="navigation__date">2022</div>
-        <button type="button" className="navigation__button">ᐳ</button>
+        <button type="button" className="navigation__button">
+          ᐸ
+        </button>
+        <CurrentMonth />
+        <button type="button" className="navigation__button">
+          ᐳ
+        </button>
       </div>
       <div className="calendar__calendar">
-        <div>Monday, </div>
-        <div>Tuesday, </div>
-        <div>Wednesday, </div>
-        <div>Thursday, </div>
-        <div>Friday, </div>
-        <div>Saturday, </div>
-        <div>Sunday, </div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
+        <Dates />
       </div>
     </main>
   );

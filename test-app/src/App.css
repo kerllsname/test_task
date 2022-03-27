@@ -93,3 +93,16 @@ main {
 .calendar__calendar > div {
   border: 1px solid rgba(0, 0, 0, 0.089);
 }
+
+.calendar__unactive-date {
+  background-color: #68686834;
+  color: #3a3a3a;
+}
+
+.calendar__active-date {
+  background-color: #b3c6eb67;
+}
+
+.calendar__current-date {
+  background-color: #3662b9ad;
+}
