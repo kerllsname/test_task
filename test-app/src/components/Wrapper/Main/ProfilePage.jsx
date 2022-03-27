@@ -1,13 +1,6 @@
-import ErrorPage from './ErrorPage';
 import avatar from '../../../images/avatar.png';
 
 export default function ProfilePage() {
-  const accountName = localStorage.getItem('name');
-
-  if (!accountName) {
-    return <ErrorPage />;
-  }
-
   return (
     <main className="profile">
       <div className="profile__img">

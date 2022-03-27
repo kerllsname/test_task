@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 export default function Header() {
   let accountName = localStorage.getItem('name');
 
   if (!accountName) {
-    accountName = <a href="/login">log in</a>;
+    accountName = <Link to="/login">log in</Link>;
   }
 
   return (
