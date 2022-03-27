@@ -1,0 +1,43 @@
+header {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+}
+
+aside {
+  width: 150px;
+}
+
+nav {
+  margin-left: 20px;
+}
+
+.page-navigation li{
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.homepage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homepage > div {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.homepage__description {
+  margin-bottom: 50px;
+}
